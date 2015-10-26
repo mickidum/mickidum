@@ -189,7 +189,7 @@ textarea {
     background: #F5F5F5;
     /*overflow: hidden;*/
     right: 0;
-    bottom: 0;
+    /*bottom: 0;*/
 }
 .content iframe {
     position: relative;
