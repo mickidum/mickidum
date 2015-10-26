@@ -187,13 +187,13 @@ textarea {
     width: 78%;
     height: 100%;
     background: #F5F5F5;
-    overflow: hidden;
+    /*overflow: hidden;*/
     right: 0;
     bottom: 0;
 }
 .content iframe {
     position: relative;
-    width: 100%;
+    width: inherit;
     height: 100%;
 }
 #screen {
