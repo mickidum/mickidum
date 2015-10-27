@@ -82,6 +82,7 @@
             'position': 'absolute'
         });
         $('.content').addClass('holder');
+        setTimeout(function(){ $('.content').removeClass('holder') }, 5000);
         $('.content').css('width', '100%');
         $('.content').html('<iframe id="screen" src="' + http +'" frameborder="0"></iframe>');
         $('.wrapper').addClass('mobile');
