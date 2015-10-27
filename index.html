@@ -70,6 +70,10 @@
             jQuery(document).ready(function($) {
     $('.item').on('click', function(event) {
         event.preventDefault();
+
+        $('.item').removeClass('active');
+        $(this).addClass('active');
+        
         var http = $(this).attr('href');
         $('#screen').attr('src', http);
         // $('.placeholder').hide();
@@ -78,7 +82,8 @@
             'position': 'absolute'
         });
         $('.content').css('width', '100%');
-        $('.content').html('<iframe id="screen" src="' + http +'" frameborder="0"></iframe>')
+        $('.content').html('<iframe id="screen" src="' + http +'" frameborder="0"></iframe>');
+        $('.wrapper').addClass('mobile');
     });
     
     $('.close').on('click', function(event) {
