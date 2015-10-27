@@ -102,6 +102,12 @@ textarea {
     color: #424242;
     font-size: 1.5em; 
 }
+
+.holder {
+    background: url(../img/loading.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+}
 .wrapper {
     overflow: hidden;
     position: relative;
