@@ -104,9 +104,9 @@ textarea {
 }
 
 .holder {
-    background: url(../img/loading.gif);
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url(../img/loading.gif) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
 }
 .wrapper {
     overflow: hidden;
