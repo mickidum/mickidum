@@ -30,10 +30,10 @@
             </h1>
                <ul class="sites">
                    <li><a class="item" href="http://ashtar.zur4win.com">Ashtar Cosmetics</a></li>
-                   <li><a class="item" href="http://zur4win.com/sportan-haifa">Sportan Haifa</a></li>
+                   <li><a class="item" href="http://zur4win.com/sportan-haifa/index.php">Sportan Haifa</a></li>
                    <li><a class="item" href="http://diet.zur4win.com">Dieta Club</a></li>
                    <li><a class="item" href="http://grinfeld.life">Grinfeld ltd</a></li>
-                   <li><a class="item" href="http://zur4win.com/efraim">Hecht Efraim</a></li>
+                   <li><a class="item" href="http://zur4win.com/efraim/index.html">Hecht Efraim</a></li>
                    <li><a class="item" href="http://castra.co.il">Castra Mall</a></li>
                    <li><a class="item" href="http://www.naon-serv.co.il">Naon Serve</a></li>
                    <li><a class="item" href="http://zur4win.com/logianew">Logia ltd</a></li>
@@ -76,15 +76,19 @@
         
         var http = $(this).attr('href');
         $('#screen').attr('src', http);
-        // $('.placeholder').hide();
         $('.list').css({
             'background-color': 'rgba(250, 250, 250, 0.82)',
             'position': 'absolute'
         });
+
         $('.content').addClass('holder');
-        setTimeout(function(){ $('.content').removeClass('holder') }, 5000);
         $('.content').css('width', '100%');
         $('.content').html('<iframe id="screen" src="' + http +'" frameborder="0"></iframe>');
+        $('.content #screen').load(function(){
+        console.log('load the iframe');
+        $('.content').removeClass('holder');
+        });
+        $('#screen').contents().find('body').css('-webkit-transform', 'translate3d(0, 0, 0)');
         $('.wrapper').addClass('mobile');
     });
     
