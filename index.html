@@ -44,7 +44,7 @@
 <div class="row expanded container column"><!-- container-start -->
 
 <div class="row expanded top collapse">
-<h3 class="text-center ttl">Sportan Summer</h3>
+<h3 class="text-center ttl"><strong>Latest Webwork:</strong> "Sportan Summer"</h3>
 	<div class="medium-3 large-2 columns">
 		<div class="header">
 			<p>WEBWORKS</p>
@@ -218,7 +218,7 @@ $('.item').on('click', function(event) {
         $(this).addClass('active');
         $('.screen').addClass('holder');
         
-        $('.ttl').html($(this).html());
+        $('.ttl').html("<strong>Webwork: </strong>\"" + $(this).html() + "\"");
         var http = $(this).attr('href');
         
         $('.spaceWrap').html('<iframe class="frama viewPort" src="' + http +'"></iframe>');
